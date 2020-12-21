@@ -11,6 +11,9 @@ namespace MvcMovie.Models
         [DataType(DataType.Date)]
         public DateTime ReleaseDate { get; set; }
         public string Genre { get; set; }
+
+        [Required]
+        [Range(1, 10, ErrorMessage = "Value for {0} must be between {1} and {2}.")]
         public decimal MovieScore { get; set; }
     }
 }

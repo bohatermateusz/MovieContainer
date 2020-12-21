@@ -45,7 +45,7 @@ namespace WebApplication18.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price")]
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Movie Score")]
             Movie movie)
         {
             if (ModelState.IsValid)
@@ -73,7 +73,7 @@ namespace WebApplication18.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price")]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Movie Score")]
             Movie movie)
         {
             if (id != movie.Id) return NotFound();
